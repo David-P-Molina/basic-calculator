@@ -1,14 +1,10 @@
 function App() {
-    
-    const createDigits = () => {
-        const digits = []
-        for (let i = 1; i < 10; i++) {
-            digits.push(
-                <button key={i}>{i}</button>
-            )
-        }
-        return digits
+    const operators = ["/", "*", "+", "-","DEL"]
+    const digits = [1,2,3,4,5,6,7,8,9,0]
+    const generateButtons = (array) => {
+       return array.map((el) => <button key={el}>{el}</button>)
     }
+    
   return (
     <div className="App">
       <h1>Basic Calculator</h1>
@@ -17,17 +13,13 @@ function App() {
                 <span>(0)</span> 0
             </div>
                 <div className="operators">
-                    <button>/</button>
-                    <button>*</button>
-                    <button>+</button>
-                    <button>-</button>
-                    <button>DEL</button>
+                    {generateButtons(operators)}
+
                 </div>
                 <div className="digits">
-                    <button>0</button>
+                    {generateButtons(digits)}
                     <button>.</button>
                     <button>=</button>
-                    {createDigits()}
                 </div>
         </div>
     </div>
