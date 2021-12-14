@@ -64,7 +64,19 @@ button:hover {
 .operators {
     display: flex;
 }
+
 .operators button {
     flex: 1 1 0%;
     background-color: var(--primary);
+}
+
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.digits button {
+    flex: 1 1 33.333%;
+    max-width: ;
+    background-color: var(--dark);
 }
